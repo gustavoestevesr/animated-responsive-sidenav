@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { Router } from '@angular/router';
 
 export type MenuItem = {
   icon: string;
@@ -19,7 +20,11 @@ export type MenuItem = {
 })
 export class MenuSidenavComponent {
 
-  menuItems = signal<MenuItem[]>([
+  constructor(public router: Router) {}
+
+  @Input() collapsed: boolean = false;
+
+  menuItems: MenuItem[] = [
     {
       icon: 'dashboard',
       label: 'Dashboard',
@@ -31,11 +36,6 @@ export class MenuSidenavComponent {
       route: 'content',
     },
     {
-      icon: 'dashboard',
-      label: 'dashboard',
-      route: 'dashboard',
-    },
-    {
       icon: 'analytics',
       label: 'Analytics',
       route: 'analytics',
@@ -45,6 +45,10 @@ export class MenuSidenavComponent {
       label: 'Comments',
       route: 'comments',
     }
-  ]);
+  ];
+
+  get profilePicSize() {
+    return this.collapsed ? '32' : '100';
+  }
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidebarComponent } from './components/sidenav/sidenav.component';
@@ -11,5 +11,9 @@ import { SidebarComponent } from './components/sidenav/sidenav.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'animated-responsive-sidenav';
+  collapsed = false;
+
+  onToggleCollapsed() {
+    this.collapsed = !this.collapsed;
+  }
 }

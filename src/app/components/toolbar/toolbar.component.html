@@ -1,13 +1,25 @@
 <mat-toolbar class="mat-toolbar mat-elevation-z3">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="onToggleCollapsed()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
+  <span>My Studio</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
+  <mat-form-field appearance="outline" class="search-bar half-full-width">
+    <mat-icon matSuffix class="cursor-pointer">keyboard</mat-icon>
+    <mat-icon matSuffix class="cursor-pointer">search</mat-icon>
+    <input matInput placeholder="Pesquisar..." value="Sushi">
+  </mat-form-field>
+  <button mat-icon-button aria-label="Example icon-button with mic icon">
+    <mat-icon>mic</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
+  <span class="example-spacer"></span>
+  <button mat-icon-button aria-label="Example icon-button with videocam icon">
+    <mat-icon>videocam</mat-icon>
+  </button>
+  <button mat-icon-button class="cursor-pointer notifications-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>notifications</mat-icon>
+  </button>
+  <button mat-icon-button class="cursor-pointer account_circle-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>account_circle</mat-icon>
   </button>
 </mat-toolbar>
