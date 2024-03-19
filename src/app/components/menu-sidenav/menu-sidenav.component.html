@@ -8,7 +8,7 @@
   </div>
 </div>
 <mat-nav-list>
-  <a mat-list-item *ngFor="let item of menuItems" (click)="router.navigate([item.route])">
+  <a mat-list-item *ngFor="let item of menuItems" (click)="navigateTo(item)" [activated]="item.isActive">
     <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
     <span matListItemTitle *ngIf="!collapsed">{{item.label}}</span>
   </a>
