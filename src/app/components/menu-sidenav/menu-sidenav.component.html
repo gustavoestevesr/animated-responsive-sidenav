@@ -1,0 +1,13 @@
+<div class="sidenav-header">
+  <img src="https://avatars.githubusercontent.com/u/79676550?v=4" width="100" height="100" placeholder>
+  <div class="header-text">
+    <h2>Your Channel</h2>
+    <p>Gustavo Esteves Rocha</p>
+  </div>
+</div>
+<mat-nav-list>
+  <a mat-list-item *ngFor="let item of menuItems()">
+    <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+    <span matListItemTitle>{{item.label}}</span>
+  </a>
+</mat-nav-list>
