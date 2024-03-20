@@ -1,4 +1,4 @@
-.content {
+.mat-sidenav-content  {
   padding: 24px;
 }
 
@@ -10,3 +10,9 @@
 .mat-sidenav {
   width: 250px;
 }
+
+.mat-sidenav, .mat-sidenav-content {
+  transition: all 500ms ease-in-out;
+}
+
+

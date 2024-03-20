@@ -2,7 +2,7 @@
   <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
     <app-menu-sidenav [collapsed]="collapsed" (toggleCollapsed)="onToggleCollapsed()"></app-menu-sidenav>
   </mat-sidenav>
-  <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
+  <mat-sidenav-content class="mat-sidenav-content " [style.margin-left]="sidenavWidth()">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -8,8 +8,8 @@
   </div>
 </div>
 <mat-nav-list>
-  <a mat-list-item *ngFor="let item of menuItems" (click)="navigateTo(item)" [activated]="item.isActive">
-    <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+  <a mat-list-item class="menu-item" *ngFor="let item of menuItems" (click)="navigateTo(item)" [activated]="item.isActive" [ngClass]="{'selected-menu-item': item.isActive}">
+    <mat-icon matListItemIcon [fontSet]="item.isActive ? 'material-icons' : 'material-icons-outlined'">{{item.icon}}</mat-icon>
     <span matListItemTitle *ngIf="!collapsed">{{item.label}}</span>
   </a>
 </mat-nav-list>
